@@ -9,6 +9,11 @@ RESTful API untuk sistem manajemen produk yang mencakup fitur **login, register*
 - **ORM**: Sequelize  
 - **Authentication**: JWT 
 
+## ERD
+
+![ERD](erd.png)
+
+
 ## Running Apps Locally
 
 ### 1. Clone dan Install Dependencies
@@ -51,7 +56,7 @@ npm run seed         # Mengisi data awal (user & produk)
 ```
 
 
-## folder structure
+## Project structure
 
 ```
 .
@@ -81,4 +86,18 @@ npm run seed         # Mengisi data awal (user & produk)
 ├── .env                         # File konfigurasi environment
 └── README.md                    # Dokumentasi proyek
 ```
+
+
+## API EndPoint
+
+| Method | Endpoint               | Deskripsi                        | Auth Required |
+| ------ | ---------------------- | -------------------------------- | ------------- |
+| POST   | `/api/v1/register`     | Registrasi user baru             | No            |
+| POST   | `/api/v1/login`        | Login dan mendapatkan token      | No            |
+| GET    | `/api/v1/products`     | Menampilkan semua produk         | Yes           |
+| POST   | `/api/v1/products`     | Menambahkan produk baru          | Yes           |
+| PUT    | `/api/v1/products/:id` | Memperbarui data produk          | Yes           |
+| DELETE | `/api/v1/products/:id` | Menghapus produk                 | Yes           |
+| GET    | `/api/v1/whoami`       | Menampilkan data user yang login | Yes           |
+
 
