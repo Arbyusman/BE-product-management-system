@@ -1,4 +1,5 @@
 const { Product } = require('../models');
+const { Op } = require('sequelize');
 
 module.exports = {
   async findAll(options = {}) {
@@ -8,7 +9,9 @@ module.exports = {
       const where = search
         ? {
           ...condition,
-          name: { [Op.like]: `%${search}%` }
+          [Op.or]: [
+            { name: { [Op.like]: `%${search}%` } },
+          ]
         }
         : condition;
 

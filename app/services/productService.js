@@ -9,7 +9,6 @@ class ProductService {
                 search: search || undefined
             });
         } catch (error) {
-            console.error('Service error:', error);
             throw new Error(`Failed to list products: ${error.message}`);
         }
     }
