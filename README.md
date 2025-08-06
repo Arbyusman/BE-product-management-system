@@ -14,8 +14,8 @@ RESTful API untuk sistem manajemen produk yang mencakup fitur **login, register*
 ### 1. Clone dan Install Dependencies
 
 ```bash
-git clone https://github.com/Arbyusman/product-management-system.git
-cd product-management-system
+git clone https://github.com/Arbyusman/BE-product-management-system.git
+cd BE-product-management-system
 
 npm install
 # atau
